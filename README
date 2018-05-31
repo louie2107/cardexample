@@ -1,0 +1,29 @@
+Description:
+	An Android application that displays a UI to the user.
+	The user can enter credit card details into the UI.
+	When a credit card's brand can be detected, it's logo is shown,
+	and the card's details fields max length will match the cards parameters.
+	When the user clicks the submit button, an algorithmic validation is done on,
+	the card's number, and the result is displayed to the user. 
+Usage:
+	This Android project use the Gradle build system.
+	The fastest method to build and run this project is to download Android Studio,
+	and import the project.
+Cards and Validations:
+	New cards can be created as a CardType enum. A regex pattern is used to determine
+	the card brand. The max length of the card number and cvv number, as well as a card logo
+	can also be defined.
+	To define the algorithm used for card validation, you can create a class that
+	implements the validator interface and pass it to the enum.
+UI:
+	The UI consists of an edittext view that allows the user to enter a card number.
+	There are also two spinner views that allow the user to enter the card's expiration date.
+	An edittext view also allows the user to enter the cvv number of the card.
+	There is a submit button that when clicked will do a validation on the card.
+	As the user enters a card number, the brand is detected and the card's logo is shown.
+	If the card is unknown, no checks will be run, except for the validation when the submit
+	button is clicked.
+Tests:
+	There are currently two Android tests that test the brand of cards with known
+	card numbers and their validations.
+	Any future cards or validation algorithms should have tests created when added.

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/sc_main_container"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/cart_background"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/shopping_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_shopping_cart"
+                android:contentDescription="@string/shopping_cart"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ln_form_conrainer"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_below="@+id/rl_header"
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/tv_card_number_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/credit_card_number"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"/>
+
+            <LinearLayout
+                android:id="@+id/ln_card_number_container"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="43dp">
+
+                <ImageView
+                    android:id="@+id/iv_card_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_other"
+                    android:contentDescription="@string/credit_card_brand"/>
+
+                <EditText
+                    android:id="@+id/et_credit_card_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_expiration_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/expiration_date"
+                android:layout_below="@+id/ln_card_number_container"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <LinearLayout
+                android:id="@+id/ln_expiration_date_container"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="2"
+                android:layout_below="@+id/tv_expiration_date_label"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_expiration_month_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/month"/>
+
+                <Spinner
+                    android:id="@+id/sp_expiration_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/months"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tv_expiration_year_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/year"/>
+
+                <Spinner
+                    android:id="@+id/sp_expiration_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_cvv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/cvv"
+                android:layout_below="@+id/ln_expiration_date_container"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_cvv_container"
+                android:layout_below="@+id/tv_cvv_label"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/et_credit_card_cvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"/>
+
+                <ImageView
+                    android:id="@+id/forgot_icon"
+                    android:src="@drawable/ic_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/cvv_help"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/bn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/rl_cvv_container"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

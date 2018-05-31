@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Card Example</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="submit">Submit</string>
+    <string name="cvv_help">Cvv Help</string>
+    <string name="cvv">CCV</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="shopping_cart">Shopping Card</string>
+    <string name="credit_card_number">Credit Card Number</string>
+    <string name="credit_card_brand">Credit Card Brand</string>
+    <string name="success">Success!</string>
+    <string name="fail">Card number is invalid.</string>
+    <string name="validation_dialog_title">Validation</string>
+    <string name="okay">Okay</string>
+    <string name="cvv_dialog_message">The cvv number is the 3 or 4 digit number located on the back of your card.</string>
+    <string name="cvv_dialog_title">Cvv Help</string>
+</resources>
